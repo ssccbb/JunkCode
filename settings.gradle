@@ -1,0 +1,2 @@
+rootProject.name = "JunkCode"
+include ':app'
