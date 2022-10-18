@@ -28,8 +28,8 @@ android {
     }
     androidJunkCode {
         def config = {
-            packageBase = "com.rybicn.tnkdaq"
-            packageCount = 25
+            packageBase = "com.zhugrw.mxjzat"
+            packageCount = 40
             activityCountPerPackage = 3
             excludeActivityJavaFile = false
             otherCountPerPackage = 50
