@@ -1,18 +1,19 @@
 plugins {
     id 'com.android.application'
+    id 'android-junk-code'
 }
-apply plugin: 'android-junk-code'
 
 android {
-    compileSdkVersion 30
+    namespace 'com.sung.junkcode'
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.sung.junkcode"
-        minSdkVersion 22
-        targetSdkVersion 30
+        minSdk 22
+        targetSdk 33
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,7 +29,7 @@ android {
     }
     androidJunkCode {
         def config = {
-            packageBase = "com.zhugrw.mxjzat"
+            packageBase = "com.ewnhua.otshad"
             packageCount = 40
             activityCountPerPackage = 3
             excludeActivityJavaFile = false
@@ -50,7 +51,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
